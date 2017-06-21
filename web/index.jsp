@@ -13,10 +13,6 @@
   <head>
     <title>$Title$</title>
   </head>
-  <%!
-    AdministratorEntity administratorEntity;
-    Transaction transaction;
-  %>
   <%
   %>
   <body>
@@ -29,7 +25,5 @@
   <jsp:getProperty name="test" property="admName"></jsp:getProperty>
   <p>print form db...</p>
   <br>
-  UserId: <%=administratorEntity.getAdmId()%>
-  UserName: <%=administratorEntity.getAdmName()%>
   </body>
 </html>
