@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.sun.EmployeeEntity" table="employee" schema="meetingroom">
+        <id name="staffId">
+            <column name="staff_id" sql-type="int(11)"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(128)" length="128" not-null="true"/>
+        </property>
+        <property name="telephone">
+            <column name="telephone" sql-type="varchar(128)" length="128" not-null="true"/>
+        </property>
+        <property name="email">
+            <column name="email" sql-type="varchar(128)" length="128" not-null="true"/>
+        </property>
+        <property name="position">
+            <column name="position" sql-type="varchar(128)" length="128" not-null="true"/>
+        </property>
+        <property name="level">
+            <column name="level" sql-type="int(11)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

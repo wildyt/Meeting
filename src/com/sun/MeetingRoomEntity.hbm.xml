@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.sun.MeetingRoomEntity" table="meeting_room" schema="meetingroom">
+        <id name="meetingRoomId">
+            <column name="meeting_room_id" sql-type="int(11)"/>
+        </id>
+        <property name="meetingRoomName">
+            <column name="meeting_room_name" sql-type="varchar(128)" length="128" not-null="true"/>
+        </property>
+        <property name="capacity">
+            <column name="capacity" sql-type="bigint(20)" not-null="true"/>
+        </property>
+        <property name="roomNumbler">
+            <column name="room_numbler" sql-type="varchar(128)" length="128" not-null="true"/>
+        </property>
+        <property name="remark">
+            <column name="remark" sql-type="text" not-null="true"/>
+        </property>
+        <property name="currentAtate">
+            <column name="current_atate" sql-type="varchar(128)" length="128" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="meetingroom@172.18.5.127">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="meetingroom">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="12"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="sakila"/>
+    <schema id="8" parent="1" name="test"/>
+    <schema id="9" parent="1" name="world"/>
+    <table id="10" parent="2" name="administrator"/>
+    <table id="11" parent="2" name="audit"/>
+    <table id="12" parent="2" name="department"/>
+    <table id="13" parent="2" name="department_relation_staff"/>
+    <table id="14" parent="2" name="employee"/>
+    <table id="15" parent="2" name="employee_copy"/>
+    <table id="16" parent="2" name="meeting"/>
+    <table id="17" parent="2" name="meeting_relation_staff"/>
+    <table id="18" parent="2" name="meeting_room"/>
+    <table id="19" parent="2" name="user"/>
+    <table id="20" parent="2" name="visit_num"/>
+    <column id="21" parent="10" name="adm_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="10" name="adm_name">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <key id="23" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>adm_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="24" parent="11" name="audit_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="11" name="audit_name">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="26" parent="11" name="audit_tele">
+      <Position>3</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="27" parent="11" name="audit_email">
+      <Position>4</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <key id="28" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>audit_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="12" name="department_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="12" name="department_name">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="31" parent="12" name="department_num">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="32" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>department_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="33" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="13" name="staff_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="35" parent="13" name="department_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="36" parent="13" name="department_id">
+      <ColNames>id</ColNames>
+    </index>
+    <key id="37" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="38" parent="14" name="staff_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="14" name="name">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="40" parent="14" name="telephone">
+      <Position>3</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="41" parent="14" name="email">
+      <Position>4</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="42" parent="14" name="position">
+      <Position>5</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="43" parent="14" name="level">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="44" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>staff_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="45" parent="15" name="staff_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="15" name="name">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="47" parent="15" name="telephone">
+      <Position>3</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="48" parent="15" name="email">
+      <Position>4</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="49" parent="15" name="position">
+      <Position>5</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="50" parent="15" name="level">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="51" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>staff_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="52" parent="16" name="meeting_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="16" name="meeting_name">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="54" parent="16" name="people_num">
+      <Position>3</Position>
+      <DataType>int(128)|0</DataType>
+    </column>
+    <column id="55" parent="16" name="start_time">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="56" parent="16" name="end_time">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="57" parent="16" name="meeting notes">
+      <Position>6</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="58" parent="16" name="meetingroom_id">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="59" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>meeting_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="60" parent="17" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="17" name="staff_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="62" parent="17" name="meeting_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="63" parent="17" name="staff_id">
+      <ColNames>ID</ColNames>
+    </index>
+    <key id="64" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="65" parent="18" name="meeting_room_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="18" name="meeting_room_name">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="67" parent="18" name="capacity">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="68" parent="18" name="room_numbler">
+      <Position>4</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="69" parent="18" name="remark">
+      <Position>5</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="70" parent="18" name="current_atate">
+      <Position>6</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <key id="71" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>meeting_room_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="72" parent="19" name="UserID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="73" parent="19" name="username">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="74" parent="19" name="password">
+      <Position>3</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <key id="75" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>UserID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="76" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="20" name="num">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="78" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
