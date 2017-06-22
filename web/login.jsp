@@ -1,57 +1,59 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<%
-	String path = request.getContextPath();
-	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
-			+ path + "/";
-%>
-
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-<meta http-equiv="content-type" content="text/html;charset=utf-8">
-<title>CoolMeeting会议管理系统</title>
-<link rel="stylesheet" href="styles/common.css" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>管理系统</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href="css/login.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<div class="">
 
-	<div class="page-content">
-		<div class="content-nav">登录</div>
-		<form action="LoginServlet" method="post">
-			<fieldset>
-				<legend>登录信息</legend>
-				<tr>
-					<td>提示信息：</td>
-					<td><font color="red">${requestScope.msg}</font></td>
-				</tr>
-				<table class="formtable" style="width: 50%">
-					<tr>
-						<td>账号名:</td>
-						<td><input id="accountname" name="username" type="text" /></td>
-					</tr>
-					<tr>
-						<td>密码:</td>
-						<td><input id="new" name="pwd" type="password" /></td>
-					</tr>
-					<tr>
-					 <td>
-					  <select id="timelength" name="timelength">
-					    <option value="0">每次需要登入</option>
-					    <option value="10">10天内</option>
-					    <option value="30">30天内</option>
-					  </select>
-					</td> 
-					</tr>
-					<tr>
-						<td colspan="2" class="command">
-							<input type="submit" value="登录" class="clickbutton" />
-							<input type="button" value="返回" class="clickbutton" onclick="window.history.back();" />
-							<input type="button" value="注册" class="clickbutton" onclick="window.location.href='register.jsp'" /></td>
-					</tr>
-				</table>
-			</fieldset>
-		</form>
-	</div>
-	</div>
+	<div class="" style="padding: 20px 0;">
+		<br><br><br><br><br><br>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-3 col-md-6">
+					<form class="form-horizontal" >
+						<span class="myhead" >会议管理系统</span>
+						<span class="mylogin">用户登录</span>
+						<div class="form-group">
+							<input type="email" class="form-control" id="inputEmail3" placeholder="用户名或电子邮件">
+							<i class="fa fa-user"></i>
+						</div>
+						<div class="form-group help">
+							<input type="password" class="form-control" id="inputPassword3" placeholder="密　码">
+							<i class="fa fa-lock"></i>
+							<a href="#" class="fa fa-question-circle"></a>
+						</div>
+						<div class="form-group">
+							<div class="main-checkbox">
+								<input type="checkbox" value="None" id="checkbox1" name="check"/>
+								<label for="checkbox1"></label>
+							</div>
 
+							<span class="text">Remember me</span>
+							<button onclick="login()" class="btn">登录</button>
+
+
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="related">
+		<br><br><br><br><br><br><br><br>
+	</div>
+</div>
+<script type="text/javascript">
+	function login(){
+	    window.location.href="index.jsp?action=HomePage.jsp";
+	}
+</script>
 </body>
 </html>

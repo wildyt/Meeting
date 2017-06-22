@@ -1,12 +1,13 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="utf-8">
     <title>Bootstrap导航实例</title>
     <meta name="description" content="Bootstrap navbar Example">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
     <link href="http://www.runoob.com/try//bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
         .socials {
@@ -28,7 +29,7 @@
         <div class="container">
             <ul class="nav">
                 <li class="active">
-                    <a class="brand" href="#">Home</a>
+                    <a class="brand" href="index.jsp?action=HomePage.jsp">Home</a>
                 </li>
             </ul>
             <ul class="nav">
@@ -40,9 +41,9 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">最新通知</a></li>
-                        <li><a href="#">我的预定</a></li>
-                        <li><a href="#">我的会议</a></li>
+                        <li><a href="index.jsp?action=NewNoti.jsp">最新通知</a></li>
+                        <li><a href="index.jsp?action=MyResver.jsp">我的预定</a></li>
+                        <li><a href="index.jsp?action=MyMeeting.jsp">我的会议</a></li>
                     </ul>
                 </li>
             </ul>
@@ -56,8 +57,8 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="#">部门管理</a></li>
-                        <li><a href="register.jsp">员工注册</a></li>
-                        <li><a href="#">注册审批</a></li>
+                        <li><a href="index.jsp?action=register.jsp">员工注册</a></li>
+                        <li><a href="index.jsp?action=pass.jsp">注册审批</a></li>
                         <li><a href="#">搜索员工</a></li>
                     </ul>
                 </li>
@@ -71,10 +72,10 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">添加会议室</a></li>
-                        <li><a href="#">查看会议室</a></li>
-                        <li><a href="#">预定会议</a></li>
-                        <li><a href="#">搜索会议</a></li>
+                        <li><a href="index.jsp?action=AddMeetingRoom.jsp">添加会议室</a></li>
+                        <li><a href="index.jsp?action=SeeMeetingRoom.jsp">查看会议室</a></li>
+                        <li><a href="index.jsp?action=ResverRoom.jsp">预定会议</a></li>
+                        <li><a href="index.jsp?action=searchmeeting">搜索会议</a></li>
                     </ul>
                 </li>
             </ul>
