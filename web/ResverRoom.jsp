@@ -6,22 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>预定房间</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href="css/resver.css" rel="stylesheet" type="text/css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/i18n/defaults-*.min.js"></script>
+
     <script type="text/javascript" src="js/resver.js"></script>
 </head>
 <body onload="body_load()">
-
+<br><br>
 <div class="demo form-bg">
     <div class="demo form-bg" style="padding: 20px 0;">
         <div class="container">
             <div class="row">
-                <div class="col-md-offset-3 col-md-6">
+                <div class="col-md-offset-2 col-md-8">
                     <form class="form-horizontal">
                         <span class="heading">会议信息</span>
                         <div class="form-group">
-                            <label class="col-lg-3 control-label">会议名称：</label>
+                            <label class="col-lg-2 control-label">会议名称：</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="inputUserName" placeholder="例如：201">
                             </div>
@@ -36,7 +46,7 @@
                             <label class="col-lg-3 control-label">预开始时间：</label>
                             <div class="col-sm-8">
                                 <input type="date" class="form-control" id="inputStartDate">
-                                <br>
+                                <br><br>
                                 <input type="time" class="form-control" id="inputStartTime">
                             </div>
                         </div>
@@ -44,7 +54,7 @@
                             <label class="col-lg-3 control-label">预结束时间：</label>
                             <div class="col-sm-8">
                                 <input type="date" class="form-control" id="inputEndDate">
-                                <br>
+                                <br><br>
                                 <input type="time" class="form-control" id="inputEndTime">
                             </div>
                         </div>
@@ -69,17 +79,17 @@
                                 <tr>
                                     <label class="col-lg-3 control-label">参会人员：</label>
                                     <td>
-                                        <div id="divfrom">
-                                            <select class="form-control" id="selDepartments" onchange="fillEmployees()">
+                                        <div class="col-lg-6 col-md-2" id="divfrom">
+                                            <select class="" id="selDepartments" onchange="fillEmployees()">
                                             </select>
                                             <select  id="selEmployees" multiple="true">
                                             </select>
                                         </div>
-                                        <div  id="divoperator">
+                                        <div class="col-lg-7 col-md-1" id="divoperator">
                                             <input type="button" class="btn" value="&gt;" onclick="selectEmployees()"/>
                                             <input type="button" class="btn" value="&lt;" onclick="deSelectEmployees()"/>
                                         </div>
-                                        <div id="divto">
+                                        <div class="col-lg-9 col-md-2" id="divto">
                                             <select id="selSelectedEmployees" multiple="true">
                                             </select>
                                         </div>

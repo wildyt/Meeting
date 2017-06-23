@@ -10,6 +10,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link href="css/login.css" rel="stylesheet" type="text/css">
 </head>
+<%
+
+%>
 <body>
 <div class="">
 
@@ -22,7 +25,7 @@
 						<span class="myhead" >会议管理系统</span>
 						<span class="mylogin">用户登录</span>
 						<div class="form-group">
-							<input type="email" class="form-control" id="inputEmail3" placeholder="用户名或电子邮件">
+							<input type="text" class="form-control" id="username" placeholder="用户名或电子邮件">
 							<i class="fa fa-user"></i>
 						</div>
 						<div class="form-group help">
@@ -37,7 +40,7 @@
 							</div>
 
 							<span class="text">Remember me</span>
-							<button onclick="login()" class="btn">登录</button>
+							<button onclick="return login()" class="btn">登录</button>
 
 
 						</div>
@@ -52,8 +55,10 @@
 </div>
 <script type="text/javascript">
 	function login(){
-	    window.location.href="index.jsp?action=HomePage.jsp";
-	}
+	    var name=document.getElementById("username");
+	    window.location.href="index.jsp?action=HomePage.jsp?username="+name.value;
+        return false;
+    }
 </script>
 </body>
 </html>

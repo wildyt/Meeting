@@ -33,23 +33,23 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://$USER_HOME$/Downloads/mysql-connector-java-5.1.42 3" />
+          <root url="file://$MODULE_DIR$/lib/JSONObject所必须的6个包/JSONObject所必须的6个包" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES>
-          <root url="file://$USER_HOME$/Downloads/mysql-connector-java-5.1.42 3/src" />
-        </SOURCES>
-        <jarDirectory url="file://$USER_HOME$/Downloads/mysql-connector-java-5.1.42 3" recursive="false" />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/lib/JSONObject所必须的6个包/JSONObject所必须的6个包" recursive="false" />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://$USER_HOME$/Desktop/JSONObject所必须的6个包/JSONObject所必须的6个包" />
+          <root url="file://$MODULE_DIR$/lib/mysql-connector-java-5.1.42 3" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
-        <jarDirectory url="file://$USER_HOME$/Desktop/JSONObject所必须的6个包/JSONObject所必须的6个包" recursive="false" />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/lib/mysql-connector-java-5.1.42 3/src" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/lib/mysql-connector-java-5.1.42 3" recursive="false" />
       </library>
     </orderEntry>
   </component>

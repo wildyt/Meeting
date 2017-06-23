@@ -3,6 +3,7 @@ package Test;
 import Utils.HibernateUtils;
 import com.sun.AdministratorEntity;
 import com.sun.UserEntity;
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -29,7 +30,14 @@ public class Test {
 //        session1.close();
 //        System.out.println(administratorEntity.getAdmId());
 //        System.out.println(administratorEntity.getAdmName());
+        JSONArray jsonArray=new JSONArray();
         JSONObject jsonObject=JSONObject.fromObject(administratorEntity);
-        System.out.println(jsonObject);
+        AdministratorEntity administratorEntity1=new AdministratorEntity();
+        administratorEntity1.setAdmName("zxr");
+        administratorEntity1.setAdmId(23);
+        jsonArray.add(administratorEntity);
+        jsonArray.add(administratorEntity1);
+
+        System.out.println(jsonArray);
 }
 }

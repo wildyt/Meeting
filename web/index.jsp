@@ -9,6 +9,7 @@
 <%!
     String direct="Welcome.jsp";
     String guide="null.jsp";
+    String username;
 %>
 <%
     if (null!=request.getParameter("action")){
@@ -20,6 +21,15 @@
         direct="Welcome.jsp";
         guide="null.jsp";
         System.out.println("null");
+    }
+    if (null!=request.getParameter("username")){
+        if (session.isNew()){
+            session.setAttribute("username",request.getParameter("username"));
+            username=request.getParameter("username");
+        }
+    }
+    else {
+        username= (String) session.getAttribute("username");
     }
 %>
 <!DOCTYPE html>
@@ -47,12 +57,7 @@
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <jsp:include page="<%=guide%>"></jsp:include>
-<div>
-    <% if (guide=="gudie.jsp"){%>
-    <br><br>
-    <%}%>
-<jsp:include page="<%=direct%>" flush="true"></jsp:include>
-</div>
+<jsp:include page="<%=direct%>"></jsp:include>
 </body>
 </html>
 
