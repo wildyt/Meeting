@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page import="com.HelloClient" %>
+<%@ page import="com.Itest" %>
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -10,7 +12,12 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link href="css/login.css" rel="stylesheet" type="text/css">
 </head>
+<%!
+	HelloClient helloClient;
+	Itest itest;
+%>
 <%
+	itest=helloClient.gettest();
 
 %>
 <body>
