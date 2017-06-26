@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-table.min.css">
+    <link rel="stylesheet" href="css/button_style.css">
+    <link rel="stylesheet" href="css/a_style.css">
+    <style type="text/css">
+
+        .table>tbody>tr>td{
+            vertical-align: middle!important;padding:3px;line-height:1.42857143;vertical-align:top;border-top:1px solid #ddd}
+    </style>
+</head>
+<body>
+<div>
+    <br><br><br>
+    <div class="container">
+        <p style="font-size: larger">个人中心->我的预定</p>
+    </div>
+    <div class="container">
+        <div  class="panel-body" style="padding-bottom:0px;padding-left: 0px;padding-right: 0px">
+            <div class="panel panel-default">
+                <div style="text-align:center;font-weight:bold;font-size: larger" class="panel-heading">
+                    <a>我预定的会议</a>
+                </div>
+                <div class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <form id="formSearch" class="form-horizontal">
+                            <table id="table"
+                                   class="table table-striped"
+                                   data-toggle="table"
+                                   data-url="data/data1.json"
+                                   data-show-columns="true"
+                                   data-search="true"
+                                   data-show-refresh="true"
+                                   data-show-toggle="true"
+                                   data-pagination="true"
+                                   data-page-size="8"
+                                   data-cache="false">
+                                <thead>
+                                <tr >
+                                    <th data-field="meetingname" data-formatter="idFormatter">会议名称</th>
+                                    <th data-field="roomname">会议室名称</th>
+                                    <th data-field="begintime">会议开始时间</th>
+                                    <th data-field="endtime">会议结束时间</th>
+                                    <th data-field="resvertime">会议预定时间</th>
+                                    <th class="col-lg-2"  data-field="operation" data-formatter="operateFormatter">操作</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--<script src="assets/bootstrap2.3/js/bootstrap.min.js"></script>-->
+<script src="js/jquery.base64.js"></script>
+<script src="js/bootstrap-table.js"></script>
+<script src="js/bootstrap-table-export.js"></script>
+
+<script type="text/javascript">
+    function operateFormatter(value, row, index) {
+        return [
+            '<button type="button" class="nooutline RoleOfC btn btn-default  btn-sm" data-toggle="modal" data-target="#myModal">查看/撤销</button>',
+
+        ].join('');
+    }
+</script>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    会议信息
+                </h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label control-label>会议名称</label>
+                    <div class="">
+                        <input type="text" class=" form-control" name="username" disabled/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" control-label">预计参加人数</label>
+                    <div class="">
+                        <input type="password" class="form-control" name="password" disabled/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class=" control-label">预计开始时间</label>
+                    <div class="">
+                        <input type="password" class="form-control" name="confirmPassword" disabled/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" control-label">预计结束时间</label>
+                    <div class="">
+                        <input type="password" class="form-control" name="confirmPassword" disabled/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" control-label">会议说明</label>
+                    <div class="">
+                        <textarea rows="3" type="password" class="form-control" name="confirmPassword" disabled></textarea>
+                    </div>
+                </div>
+                <label class=" control-label">参会人员</label>
+
+                <table id="table"
+                       class="table table-striped"
+                       data-toggle="table"
+                       data-url="data/data1.json"
+                       data-show-columns="true"
+                       data-search="true"
+                       data-show-refresh="true"
+                       data-show-toggle="true"
+                       data-pagination="true"
+                       data-page-size="8"
+                       data-cache="false">
+                    <thead>
+                    <tr >
+                        <th data-field="meetingname" data-formatter="idFormatter">姓名</th>
+                        <th data-field="roomname">联系电话</th>
+                        <th data-field="begintime">电子邮箱</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="nooutline otherstyle btn btn-default" data-dismiss="modal">撤销会议
+                </button>
+                <button type="button" class="nooutline btn btn-default" data-dismiss="modal">返回
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+</body>
+</html>

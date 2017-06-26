@@ -61,11 +61,11 @@
     float: left;
     width: 20px;
     height: 20px;
-    background: #11a3fc;
+    background: #4D4D4D;
     border-radius: 50%;
     position: relative;
     margin: 5px 0 0 5px;
-    border: 1px solid #11a3fc;
+    border: 1px solid #3c3c3c;
 }
 .form-horizontal .main-checkbox label{
     width: 20px;
@@ -112,7 +112,11 @@
     padding: 10px 25px;
     border: none;
     text-transform: capitalize;
-    transition: all 0.5s ease 0s;
+}
+.form-horizontal .btn:focus {
+    background: #000000;
+}
+.form-horizontal .btn:active {
 }
 @media only screen and (max-width: 479px){
     .form-horizontal .form-group{

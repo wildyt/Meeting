@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <link href="css/bootstrap-select.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css"rel="stylesheet">
+    <link href="css/font-awesome.css">
+
+</head>
+<body>
+<select class="selectpicker remove-example">
+    <option value="Mustard">Mustard</option>
+    <option value="Ketchup">Ketchup</option>
+    <option value="Relish">Relish</option>
+</select>
+
+<button class="btn btn-warning rm-mustard">Remove Mustard</button>
+<button class="btn btn-danger rm-ketchup">Remove Ketchup</button>
+<button class="btn btn-success rm-relish">Remove Relish</button>
+
+<script type="text/javascript">
+    $('.rm-mustard').click(function () {
+        $('.remove-example').find('[value=Mustard]').remove();
+    });
+</script>
+
+</body>
+</html>

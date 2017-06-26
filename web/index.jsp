@@ -35,29 +35,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Bootstrap导航实例</title>
-    <meta name="description" content="Bootstrap navbar Example">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link href="http://www.runoob.com/try//bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
-        .socials {
-            padding: 10px;
-        }
-    </style>
 </head>
 <body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 <jsp:include page="<%=guide%>"></jsp:include>
+<div>
 <jsp:include page="<%=direct%>"></jsp:include>
+</div>
 </body>
 </html>
 

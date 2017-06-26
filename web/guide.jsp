@@ -6,9 +6,10 @@
     <meta charset="utf-8">
     <title>Bootstrap导航实例</title>
     <meta name="description" content="Bootstrap navbar Example">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link href="http://www.runoob.com/try//bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/down.js"></script>
     <style type="text/css">
         .socials {
             padding: 10px;
@@ -16,20 +17,20 @@
     </style>
 </head>
 <body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<%--<div id="fb-root"></div>--%>
+<%--<script>(function(d, s, id) {--%>
+    <%--var js, fjs = d.getElementsByTagName(s)[0];--%>
+    <%--if (d.getElementById(id)) return;--%>
+    <%--js = d.createElement(s); js.id = id;--%>
+    <%--js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";--%>
+    <%--fjs.parentNode.insertBefore(js, fjs);--%>
+<%--}(document, 'script', 'facebook-jssdk'));</script>--%>
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
             <ul class="nav">
                 <li class="active">
-                    <a class="brand" href="index.jsp?action=HomePage.jsp">Home</a>
+                    <a class="brand" href="index.jsp?action=HomePage.jsp">Meeting</a>
                 </li>
             </ul>
             <ul class="nav">
@@ -41,9 +42,9 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="index.jsp?action=NewNoti.jsp">最新通知</a></li>
-                        <li><a href="index.jsp?action=MyResver.jsp">我的预定</a></li>
-                        <li><a href="index.jsp?action=MyMeeting.jsp">我的会议</a></li>
+                        <li><a href="index.jsp?action=NewNoti.html">最新通知</a></li>
+                        <li><a href="index.jsp?action=MyResver.html">我的预定</a></li>
+                        <li><a href="index.jsp?action=MyMeeting.html">我的会议</a></li>
                     </ul>
                 </li>
             </ul>
@@ -56,10 +57,10 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">部门管理</a></li>
-                        <li><a href="index.jsp?action=register.jsp">员工注册</a></li>
-                        <li><a href="index.jsp?action=pass.jsp">注册审批</a></li>
-                        <li><a href="#">搜索员工</a></li>
+                        <li><a href="index.jsp?action=DepartManage.html">部门管理</a></li>
+                        <li><a href="index.jsp?action=Register.html">员工注册</a></li>
+                        <li><a href="index.jsp?action=RegistPass.html">注册审批</a></li>
+                        <li><a href="index.jsp?action=SearchPersonnel.html">搜索员工</a></li>
                     </ul>
                 </li>
             </ul>
@@ -72,10 +73,10 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="index.jsp?action=AddMeetingRoom.jsp">添加会议室</a></li>
-                        <li><a href="index.jsp?action=SeeMeetingRoom.jsp">查看会议室</a></li>
-                        <li><a href="index.jsp?action=ResverRoom.jsp">预定会议</a></li>
-                        <li><a href="index.jsp?action=searchmeeting">搜索会议</a></li>
+                        <li><a href="index.jsp?action=AddMeetingRoom.html">添加会议室</a></li>
+                        <li><a href="index.jsp?action=SeeMeetingRoom.html">查看会议室</a></li>
+                        <li><a href="index.jsp?action=ReserveMeeting.html">预定会议</a></li>
+                        <li><a href="index.jsp?action=SearchMeeting.html">搜索会议</a></li>
                     </ul>
                 </li>
             </ul>
@@ -91,23 +92,11 @@
                         <li class="socials"><!-- 将这个标签放置在要渲染的+ 1按钮的位置 -->
                             <g:plusone annotation="inline" width="150"></g:plusone>
                         </li>
-                        <li class="socials"><div class="fb-like" data-send="false" data-width="150" data-show-faces="true"></div></li>
-                        <li class="socials"><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
 </div>
-<script src="http://www.runoob.com/try/bootstrap/twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>
-<script src="http://www.runoob.com/try/bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-dropdown.js"></script>
-<script type="text/javascript">
-    (function() {
-        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-        po.src = 'https://apis.google.com/js/plusone.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-    })();
-</script>
 </body>
 </html>

@@ -18,6 +18,7 @@
 <%
     helloClient=new HelloClient();
     itest=helloClient.gettest();
+    itest.login("","");
 %>
 <body>
 <%=itest.login("zyl123","123456")%>

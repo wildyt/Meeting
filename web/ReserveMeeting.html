@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>BootstrapValidator demo</title>
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <link href="css/bootstrap-select.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css"rel="stylesheet">
+    <link href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/a_style.css">
+    <link rel="stylesheet" href="css/button_style.css">
+    <link href="css/datepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="js/datepicker/moment.js"></script>
+    <script type="text/javascript" src="js/datepicker/picker.js" charset="UTF-8"></script>
+</head>
+<body>
+<div>
+    <br><br><br>
+    <div class="container">
+        <p style="font-size: larger">会议预定->预定会议</p>
+    </div>
+</div>
+<div class="container">
+    <div class="panel-body" style="padding-bottom:0px;padding-left: 0px;padding-right: 0px">
+        <div class="panel panel-default">
+            <div style="text-align:center;font-weight:bold;font-size: larger" class="panel-heading">
+                <a>会议信息</a>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <div class="container col-lg-offset-3">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="col-lg-offset-1">
+                                    <form id="defaultForm" method="post" class="form-horizontal" action="target.php">
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label">会议名称</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" name="firstName"/>
+                                                <!--placeholder="First name"-->
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label">预计参加人数</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label">预计开始时间</label>
+                                            <div class="col-lg-6">
+                                                <input type='text' class="form-control" id="datetimepicker1"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label">预计结束时间</label>
+                                            <div class="col-lg-6">
+                                                <input type='text' class="form-control" id="datetimepicker2"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label">会议室名称</label>
+                                            <div class="col-lg-6">
+                                                <select name="meetingroonnames" id="meetingroonnames" class="selectpicker show-menu-arrow" data-live-search="true"
+                                                        data-width="100%">
+                                                </select>
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label">会议说明</label>
+                                            <div class="col-lg-6">
+                                                <textarea type="text" class="form-control" name="email"></textarea>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label">选择参会人员</label>
+                                            <div class="col-lg-6">
+                                                <select class="selectpicker" data-live-search="true" multiple
+                                                        data-width="100%">
+                                                    <optgroup label="Condiments">
+                                                        <option>Mustard</option>
+                                                        <option>Ketchup</option>
+                                                        <option>Relish</option>
+                                                    </optgroup>
+                                                    <optgroup label="Breads">
+                                                        <option>Plain</option>
+                                                        <option>Steamed</option>
+                                                        <option>Toasted</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="form-group">
+                                            <div class="col-lg-offset-3 col-lg-6">
+                                                <button class="col-lg-4 btn nooutline btn-default">预定会议</button>
+                                                <button class="col-lg-offset-2 col-lg-4 btn nooutline btn-default otherstyle">
+                                                    重置
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                        <br>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<script type="text/javascript">-->
+<!--$(document).ready(function() {-->
+<!--$('#defaultForm').bootstrapValidator({-->
+<!--message: 'This value is not valid',-->
+<!--feedbackIcons: {-->
+<!--valid: 'glyphicon glyphicon-ok',-->
+<!--invalid: 'glyphicon glyphicon-remove',-->
+<!--validating: 'glyphicon glyphicon-refresh'-->
+<!--},-->
+<!--fields: {-->
+<!--firstName: {-->
+<!--validators: {-->
+<!--notEmpty: {},-->
+<!--stringCase: {-->
+<!--'case': 'upper'-->
+<!--}-->
+<!--}-->
+<!--},-->
+<!--lastName: {-->
+<!--validators: {-->
+<!--notEmpty: {},-->
+<!--stringCase: {-->
+<!--'case': 'upper'-->
+<!--}-->
+<!--}-->
+<!--},-->
+<!--username: {-->
+<!--message: 'The username is not valid',-->
+<!--validators: {-->
+<!--notEmpty: {},-->
+<!--stringLength: {-->
+<!--min: 6,-->
+<!--max: 20-->
+<!--},-->
+<!--regexp: {-->
+<!--regexp: /^[a-zA-Z0-9_\.]+$/-->
+<!--},-->
+<!--remote: {-->
+<!--url: 'remote.php',-->
+<!--message: 'The username is not available'-->
+<!--},-->
+<!--different: {-->
+<!--field: 'password',-->
+<!--message: 'The username and password cannot be the same as each other'-->
+<!--}-->
+<!--}-->
+<!--},-->
+<!--email: {-->
+<!--validators: {-->
+<!--emailAddress: {}-->
+<!--}-->
+<!--},-->
+<!--password: {-->
+<!--validators: {-->
+<!--notEmpty: {},-->
+<!--identical: {-->
+<!--field: 'confirmPassword',-->
+<!--message: 'The password and its confirm are not the same'-->
+<!--},-->
+<!--different: {-->
+<!--field: 'username',-->
+<!--message: 'The password cannot be the same as username'-->
+<!--}-->
+<!--}-->
+<!--},-->
+<!--confirmPassword: {-->
+<!--validators: {-->
+<!--notEmpty: {},-->
+<!--identical: {-->
+<!--field: 'password'-->
+<!--},-->
+<!--different: {-->
+<!--field: 'username',-->
+<!--message: 'The password cannot be the same as username'-->
+<!--}-->
+<!--}-->
+<!--},-->
+<!--age: {-->
+<!--validators: {-->
+<!--notEmpty: {},-->
+<!--digits: {},-->
+<!--greaterThan: {-->
+<!--value: 18-->
+<!--},-->
+<!--lessThan: {-->
+<!--value: 100-->
+<!--}-->
+<!--}-->
+<!--},-->
+<!--website: {-->
+<!--validators: {-->
+<!--notEmpty: {},-->
+<!--uri: {}-->
+<!--}-->
+<!--},-->
+<!--phoneNumber: {-->
+<!--validators: {-->
+<!--notEmpty: {},-->
+<!--digits: {},-->
+<!--phone: {-->
+<!--country: 'US'-->
+<!--}-->
+<!--}-->
+<!--},-->
+<!--gender: {-->
+<!--validators: {-->
+<!--notEmpty: {}-->
+<!--}-->
+<!--},-->
+<!--'languages[]': {-->
+<!--validators: {-->
+<!--notEmpty: {}-->
+<!--}-->
+<!--},-->
+<!--'programs[]': {-->
+<!--validators: {-->
+<!--choice: {-->
+<!--min: 2,-->
+<!--max: 4-->
+<!--}-->
+<!--}-->
+<!--}-->
+<!--}-->
+<!--});-->
+<!--});-->
+<!--</script>-->
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker1').datetimepicker({
+            format: 'YYYY/MM/DD HH:mm:ss',
+            locale: 'zh-cn'
+
+        });
+
+    });
+    $(function () {
+        $('#datetimepicker2').datetimepicker({
+            format: 'YYYY/MM/DD HH:mm:ss',
+            locale: 'zh-cn'
+
+        });
+
+    });
+    $(function () {
+        $.ajax({
+            type: "POST",
+            url:"jsp/ShowAllMeetingRoom.jsp",
+            cache:false,
+            dataType:'json',
+            success:function(data){
+                $.each(data,function (i) {
+                    $('#meetingroonnames').append("<option>" + data[i].meetingRoomName + "</option>");
+                });
+                $('#meetingroonnames').selectpicker('refresh');
+            },
+            error:function () {
+                alert("error");
+
+            }
+
+        })
+    })
+
+</script>
+</body>
+</html>

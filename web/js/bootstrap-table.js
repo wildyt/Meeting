@@ -156,30 +156,46 @@
 
         rowStyle: function (row, index) {return {};},
 
-        formatLoadingMessage: function () {
-            return 'Loading, please wait…';
+    /**
+     * Bootstrap Table Chinese translation
+     * Author: Zhixin Wen<wenzhixin2010@gmail.com>
+     */
+
+
+    formatLoadingMessage: function () {
+            return '正在努力地加载数据中，请稍候……';
         },
         formatRecordsPerPage: function (pageNumber) {
-            return sprintf('%s records per page', pageNumber);
+            return '每页显示 ' + pageNumber + ' 条记录';
         },
         formatShowingRows: function (pageFrom, pageTo, totalRows) {
-            return sprintf('Showing %s to %s of %s rows', pageFrom, pageTo, totalRows);
+            return '显示第 ' + pageFrom + ' 到第 ' + pageTo + ' 条记录，总共 ' + totalRows + ' 条记录';
         },
         formatSearch: function () {
-            return 'Search';
+            return '搜索';
         },
         formatNoMatches: function () {
-            return 'No matching records found';
+            return '没有找到匹配的记录';
+        },
+        formatPaginationSwitch: function () {
+            return '隐藏/显示分页';
         },
         formatRefresh: function () {
-            return 'Refresh';
+            return '刷新';
         },
         formatToggle: function () {
-            return 'Toggle';
+            return '切换';
         },
         formatColumns: function () {
-            return 'Columns';
+            return '列';
         },
+        formatExport: function () {
+            return '导出数据';
+        },
+        formatClearFilters: function () {
+            return '清空过滤';
+        },
+
 
         onAll: function (name, args) {return false;},
         onClickRow: function (item, $element) {return false;},

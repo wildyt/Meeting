@@ -9,7 +9,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link href="css/resver.css" rel="stylesheet" type="text/css">
+    <link href="../css/resver.css" rel="stylesheet" type="text/css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
 
@@ -19,7 +19,7 @@
     <!-- (Optional) Latest compiled and minified JavaScript translation files -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/i18n/defaults-*.min.js"></script>
 
-    <script type="text/javascript" src="js/resver.js"></script>
+    <script type="text/javascript" src="../js/resver.js"></script>
 </head>
 <body onload="body_load()">
 <br><br>

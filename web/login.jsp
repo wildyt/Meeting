@@ -11,15 +11,11 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link href="css/login.css" rel="stylesheet" type="text/css">
-</head>
-<%!
-	HelloClient helloClient;
-	Itest itest;
-%>
-<%
-	itest=helloClient.gettest();
+	<script src="js/md5.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 
-%>
+</head>
 <body>
 <div class="">
 
@@ -34,12 +30,14 @@
 						<div class="form-group">
 							<input type="text" class="form-control" id="username" placeholder="用户名或电子邮件">
 							<i class="fa fa-user"></i>
+
 						</div>
 						<div class="form-group help">
-							<input type="password" class="form-control" id="inputPassword3" placeholder="密　码">
+							<input type="password" class="form-control" id="password" placeholder="密　码">
 							<i class="fa fa-lock"></i>
-							<a href="#" class="fa fa-question-circle"></a>
+							<a href="www.baidu.com" class="fa fa-question-circle"></a>
 						</div>
+						<label id="error-lable"style="color: #c9302c">账号或密码错误</label>
 						<div class="form-group">
 							<div class="main-checkbox">
 								<input type="checkbox" value="None" id="checkbox1" name="check"/>
@@ -47,7 +45,8 @@
 							</div>
 
 							<span class="text">Remember me</span>
-							<button onclick="return login()" class="btn">登录</button>
+							<button onclick="return login()" style="outline: none" class="btn">登录</button>
+
 
 
 						</div>
@@ -57,13 +56,31 @@
 		</div>
 	</div>
 	<div class="related">
-		<br><br><br><br><br><br><br><br>
 	</div>
 </div>
 <script type="text/javascript">
 	function login(){
-	    var name=document.getElementById("username");
-	    window.location.href="index.jsp?action=HomePage.jsp?username="+name.value;
+	    var username=document.getElementById("username");
+		var password_norm=document.getElementById("password");
+		var password=hex_md5(password_norm.value);
+		var error=document.getElementById("error-lable")
+		error.style.display="none";
+		password_norm.value="";
+        $.ajax(
+            {
+				type:"post",
+                url:"jsp/login.jsp",
+                data:{username:username.value,password:password},
+                error:function () {
+
+                },
+                success:function (username) {
+                    alert(username);
+                window.location.href="index.jsp?action=login.jsp";
+				}
+            }
+            );
+
         return false;
     }
 </script>

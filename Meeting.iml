@@ -52,5 +52,9 @@
         <jarDirectory url="file://$MODULE_DIR$/lib/mysql-connector-java-5.1.42 3" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="bootstrap-table-zh-CN" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="bootstrap-table-locale-all" level="application" />
+    <orderEntry type="library" name="bootstrap-table" level="application" />
   </component>
 </module>

@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>增加会议室</title>
+    <title>注册员工</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link href="css/login.css" rel="stylesheet" type="text/css">
+    <link href="../css/login.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <br><br>
@@ -18,46 +18,53 @@
             <div class="row">
                 <div class="col-md-offset-3 col-md-6">
                     <form class="form-horizontal">
-                        <span class="heading">会议室信息</span>
+                        <span class="heading">员工注册</span>
                         <div class="form-group">
-                            <label class="col-lg-3 control-label">门牌号：</label>
+                            <label class="col-lg-3 control-label">姓名：</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="inputUserName" placeholder="例如：201">
+                                <input type="text" class="form-control" id="inputUserName" placeholder="">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-3 control-label">会议室名称：</label>
+                            <label class="col-lg-3 control-label">账户名：</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="inputUserZhangName" placeholder="例如：第一会议室">
+                                <input type="text" class="form-control" id="inputUserZhangName" placeholder="">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-3 control-label">容纳人数：</label>
+                            <label class="col-lg-3 control-label">密码：</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="inputPassword" placeholder="填写一个整数">
+                                <input type="text" class="form-control" id="inputPassword" placeholder="">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-3 control-label">当前状态：</label>
+                            <label class="col-lg-3 control-label">确认密码：</label>
                             <div class="col-sm-8">
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">启用
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                                    <label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">停用
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                                    <label>  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">删除
-                                    </label>
-                                </div>
+                                <input type="text" class="form-control" id="inputSamePassword" placeholder="">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-3 control-label">备注：</label>
+                            <label class="col-lg-3 control-label">联系电话：</label>
                             <div class="col-sm-8">
-                            <textarea class="form-control" rows="3"></textarea>
+                                <input type="tel" class="form-control" id="inputTele" placeholder="">
                             </div>
                         </div>
-
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">电子邮件：</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">所在部门：</label>
+                            <div class="col-sm-8">
+                                <select class="form-control">
+                                    <option value="0">技术部</option>
+                                    <option value="1">财务部</option>
+                                    <option value="2">人事部</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="col-md-offset-3 col-md-7">
                             <button type="submit" class="btn col-md-offset3 ">提交</button>
                         </div>
